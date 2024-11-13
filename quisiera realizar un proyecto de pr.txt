@@ -1,0 +1,36 @@
+quisiera realizar un proyecto de programación de una pagina web de "Sistema de votaciones estudiantil", para ello quisiera utilizar el diseño de modelo vista controlador(MVC), mi pagina va tener lo siguiente
+
+* pagina-principal (donde todos pueden acceder sin la necesidad de registrarse con una cuneta.
+
+* Votación-electoral (donde todos pueden acceder sin la necesidad de registrarse con una cuenta).
+
+* Ganadores-electoral (donde todos pueden acceder sin la necesidad de registrarse con una cuneta)
+
+* Un Loguin (donde se va a tener que ingresar el usuario y la clave y asi poder validar si esta en la base de datos para que pueda acceder)
+
+* dashboard-principal(donde se va a tener que ingresar el usuario y la clave para poder ingresar a este dashboard)
+
+** con respecto a la base de datos voy a utilizar msql y para administrar voy a utilizar Wamp server. Ya atengo echa la base de datos y te voy a dar el archivo y también el diseño de la base de datos.
+
+** también quisiera utilizar Githab para poder tenerlo en la nube, además este proyecto que voy a realizar quiero que sea compatible con netlify donde voy a poder desplegar gratuitamente mi proyecto.
+
+** aorita quiero que me des el esquelo de la pagina web con la conexión a la base de datos, además de tener una buena organización y código limpo
+
+
+
+**************************************************************************
+ si quisiera Aser una pagina web con conexión a base de datos myql utilizando wapserver y quiero subir a git para luego desplegarlo en netlify, ademas de utilizar el diseño de modelo vista controlador(MVC)(la pagina web va ser un sistema de elecciones ). la pregunta seria que leguaje de programación seria mas conveniente utilizar y si se va a necesitar algún  framework o librería.
+
+
+1. 000webhost
+Es una opción gratuita que ofrece hosting PHP y MySQL sin costo. Puedes desplegar tu aplicación PHP y conectar tu base de datos MySQL fácilmente.
+Ventajas: Es fácil de configurar y ofrece soporte para PHP y MySQL.
+Limitaciones: Tiene restricciones de almacenamiento y ancho de banda, y no permite el uso de dominios personalizados de forma gratuita.
+2. InfinityFree
+Ofrece hosting gratuito con soporte para PHP y MySQL. Puedes subir tu proyecto mediante FTP o usar su gestor de archivos en línea.
+Ventajas: No tiene anuncios y ofrece espacio de almacenamiento ilimitado.
+Limitaciones: El rendimiento no es el mejor, y puede tener algunas limitaciones en cuanto a recursos del servidor.
+3. FreeHosting
+Ofrece hosting gratuito con soporte para PHP y bases de datos MySQL, además de permitir la utilización de un dominio personalizado.
+Ventajas: Sin anuncios y con cPanel incluido para la administración.
+Limitaciones: Tiene restricciones de almacenamiento y puede requerir renovaciones periódicas para mantener la cuenta activa.
