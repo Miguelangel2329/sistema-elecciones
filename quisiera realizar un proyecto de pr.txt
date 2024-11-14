@@ -34,3 +34,19 @@ Limitaciones: El rendimiento no es el mejor, y puede tener algunas limitaciones 
 Ofrece hosting gratuito con soporte para PHP y bases de datos MySQL, además de permitir la utilización de un dominio personalizado.
 Ventajas: Sin anuncios y con cPanel incluido para la administración.
 Limitaciones: Tiene restricciones de almacenamiento y puede requerir renovaciones periódicas para mantener la cuenta activa.
+
+para poder corregir el error en la tabla candidatos:
+ALTER TABLE candidatos 
+CHANGE COLUMN `nom-teni` `nom_teni` VARCHAR(100),
+CHANGE COLUMN `gra-teni` `gra_teni` VARCHAR(100),
+CHANGE COLUMN `nom-salu` `nom_salu` VARCHAR(100),
+CHANGE COLUMN `gra-salu` `gra_salu` VARCHAR(100),
+CHANGE COLUMN `nom-educ` `nom_educ` VARCHAR(100),
+CHANGE COLUMN `gra-educ` `gra_educ` VARCHAR(100),
+CHANGE COLUMN `nom-dere` `nom_dere` VARCHAR(100),
+CHANGE COLUMN `gra-dere` `gra_dere` VARCHAR(100),
+CHANGE COLUMN `nom-comu` `nom_comu` VARCHAR(100),
+CHANGE COLUMN `gra-comu` `gra_comu` VARCHAR(100),
+CHANGE COLUMN `nom-empr` `nom_empr` VARCHAR(100),
+CHANGE COLUMN `gra-empr` `gra_empr` VARCHAR(100),
+CHANGE COLUMN `plan-trab` `plan_trab` VARCHAR(10000);
