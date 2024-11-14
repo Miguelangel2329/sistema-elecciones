@@ -2,11 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Votación</title>
+
     <link rel="stylesheet" href="public/css/list_candidatos.css">
+    <link rel="stylesheet" href="public/css/home.css">
+
 </head>
 <body>
-    <h2>Elige tu candidato preferido</h2>
+        <!-- Encabezado -->
+        <header class="header">
+        <img src="public/images/aprista.jpg" alt="Logo" class="logo">
+        <h1>PLATAFORMA ELECTORAL ABL</h1>
+    </header>
+
+    <h2 class="navbar-1">Elige tu candidato preferido</h2> <br>
     <div class="candidatos-container">
         <?php foreach ($candidatos as $candidato): ?>
             <div class="candidato-card">

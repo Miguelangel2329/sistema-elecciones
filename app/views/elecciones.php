@@ -64,11 +64,13 @@
 
                 <h1>Panel de Elecciones</h1>
 
-                <?php if ($hayEleccionActiva): ?>
-                    <a href="index.php?action=terminar_eleccion" class="btn">Terminar Elecciones</a>
-                <?php else: ?>
-                    <a href="index.php?action=iniciar_eleccion" class="btn">Iniciar Elecciones</a>
-                <?php endif; ?>
+                <div class="form-container">
+                    <?php if ($hayEleccionActiva): ?>
+                        <button type="button" class="cancel"><a style="color: white;" href="index.php?action=terminar_eleccion" class="btn">Terminar Elecciones</a></button>
+                    <?php else: ?>
+                        <button type="button" class="register"><a style="color: white;" href="index.php?action=iniciar_eleccion" class="btn">Iniciar Elecciones</a></button>
+                    <?php endif; ?>
+                </div>
 
             </div>
             <?php foreach ($elecciones as $eleccion): ?>

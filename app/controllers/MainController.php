@@ -112,7 +112,7 @@ class MainController {
     
                     echo "Gracias por votar por: " . htmlspecialchars($_POST['nombre_candidato']);
                     session_unset();
-                    header("refresh:3;url=index.php?action=votacion");
+                    header("refresh:2;url=index.php?action=votacion");
                 } else {
                     echo "Error: Candidato no encontrado.";
                     header("refresh:2;url=index.php?action=list_votacion");
@@ -122,6 +122,83 @@ class MainController {
                 header("refresh:2;url=index.php?action=votacion");
             }
           } 
-        }
+    }
+    public function home() {
+        // Cargar la vista principal de "home"
+        require_once 'app/views/home.php';
+    }
 
+    public function ganadores() {
+        $queryEleccion = "SELECT * FROM elecciones WHERE estado IN (1, 0) ORDER BY fecha DESC LIMIT 1";
+        $stmtEleccion = $this->db->prepare($queryEleccion);
+        $stmtEleccion->execute();
+        $eleccion = $stmtEleccion->fetch(PDO::FETCH_ASSOC);
+    
+        if ($eleccion) {
+            $idEleccion = $eleccion['id_elecciones'];
+    
+            // Consulta para obtener todos los candidatos con sus votos en la última elección
+            $queryCandidatos = "
+                SELECT 
+                    c.nombre AS candidato,
+                    p.nombre AS partido,
+                    pu.nombre AS puesto,
+                    COUNT(ec.id_candidato) AS total_votos
+                FROM elecciones_cont ec
+                JOIN candidatos c ON ec.id_candidato = c.id_candidato
+                JOIN partidos p ON c.id_partido = p.id_partido
+                JOIN puestos pu ON c.id_puesto = pu.id_puesto
+                WHERE ec.id_elecciones = :id_eleccion
+                GROUP BY ec.id_candidato
+                ORDER BY total_votos DESC
+            ";
+            $stmtCandidatos = $this->db->prepare($queryCandidatos);
+            $stmtCandidatos->bindParam(':id_eleccion', $idEleccion);
+            $stmtCandidatos->execute();
+            $candidatos = $stmtCandidatos->fetchAll(PDO::FETCH_ASSOC);
+    
+            // Pasa los datos a la vista
+            require_once 'app/views/ganadores.php';
+        } else {
+            echo "No hay elecciones recientes para mostrar los resultados.";
+        }
+    }
+
+    public function candid() {
+        $query = "SELECT 
+                    c.id_candidato,
+                    c.nombre AS nombre_candidato,
+                    c.apellido,
+                    c.id_partido,
+                    c.id_puesto,
+                    c.estado,
+                    c.nom_teni,
+                    c.gra_teni,
+                    c.nom_salu,
+                    c.gra_salu,
+                    c.nom_educ,
+                    c.gra_educ,
+                    c.nom_dere,
+                    c.gra_dere,
+                    c.nom_comu,
+                    c.gra_comu,
+                    c.nom_empr,
+                    c.gra_empr,
+                    c.plan_trab,
+                    p.nombre AS nombre_partido,
+                    p.logo,
+                    foto_perfil,
+                    pu.nombre AS puesto
+                FROM candidatos c
+                JOIN partidos p ON c.id_partido = p.id_partido
+                JOIN puestos pu ON c.id_puesto = pu.id_puesto
+                WHERE c.estado = 1";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $candidatos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        // Pasar los datos a la vista
+        require_once 'app/views/candidato_l.php';
+    }
+    
 }

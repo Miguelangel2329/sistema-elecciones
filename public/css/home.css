@@ -1,0 +1,206 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a2a6c;
+    padding: 10px 20px;
+    color: white;
+}
+
+.alert-success {
+    background-color: #d4edda; /* Fondo verde claro */
+    color: #155724; /* Texto verde oscuro */
+    border: 1px solid #c3e6cb; /* Borde verde */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    margin: 20px auto;
+    width: 80%; /* Ajusta el ancho según prefieras */
+}
+
+
+.header .logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #4e5d94;
+    padding: 10px 0;
+}
+
+.navbar-1 {
+    display: flex;
+    justify-content: center;
+    background-color: #fcfdff;
+    padding: 10px 0;
+}
+
+.navbar .nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-item:hover,
+.navbar .nav-item.active {
+    background-color: #1a2a6c;
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    height: 58vh;
+}
+
+.welcome-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #1a2a6c;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-box .location-tag {
+    display: inline-block;
+    background-color: #4e5d94;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.welcome-box h2 {
+    font-size: 18px;
+    color: #1a2a6c;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #1a2a6c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #4e5d94;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #1a2a6c;
+    border: 2px solid #1a2a6c;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.image-box img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+.footer {
+    background-color: #1a2a6c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .footer-logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+/* Asegúrate de que todo el contenedor esté centrado vertical y horizontalmente */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Ajusta según lo que necesites para centrar */
+}
+
+/* Estilos adicionales para el contenedor del formulario */
+.center-prin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Opcional: añadir un fondo */
+    border-radius: 8px; /* Opcional: redondear bordes */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: añadir sombra */
+}
+
+/* Estilos para el input y botón */
+.center-prin input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 400px;
+}
+
+.center-prin button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #1a2a6c;
+    color: #fff;
+    border: none;
+}
+
+

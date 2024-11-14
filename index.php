@@ -164,6 +164,12 @@ switch ($action) {
         $controller = new MainController();
         $controller->home();
         break;
+
+    case 'candid':
+        $controller = new MainController();
+        $controller->candid();
+        break;
+
     case 'votacion':
         $controller = new MainController();
         $controller->votacion();

@@ -52,9 +52,8 @@
 
         <div class="chart-box">
             <h3>Lista de Partidos</h3>
-            <div class="button-container">
-              <a href="index.php?action=agregar_partido" class="Register">Agregar</a>
-              <button type="button" class="cancel"><a href="index.php?action=agregar_partido" class="Register">Agregar</a></button>
+            <div class="form-container">
+              <button type="button" class="register"><a style="color: white;" href="index.php?action=agregar_partido">Agregar</a></button>
             </div>
             <table>
                 <thead>

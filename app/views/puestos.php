@@ -52,9 +52,8 @@
 
         <div class="chart-box">
             <h3>Lista de Puesto</h3>
-            <div class="button-container">
-              <a href="index.php?action=agregar_puesto" class="Register">Agregar</a>
-              <button type="button" class="cancel"><a href="index.php?action=agregar_puesto" class="Register">Agregar</a></button>
+            <div class="form-container">
+              <button type="button" class="register"><a href="index.php?action=agregar_puesto" style="color: white;">Agregar</a></button>
             </div>
             <table>
                 <thead>
