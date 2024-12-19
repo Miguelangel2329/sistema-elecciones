@@ -14,8 +14,7 @@ CHANGE COLUMN `nom-empr` `nom_empr` VARCHAR(100),
 CHANGE COLUMN `gra-empr` `gra_empr` VARCHAR(100),
 CHANGE COLUMN `plan-trab` `plan_trab` VARCHAR(10000);
 
-Recurso adicionales(toda informaccion adicional se recomienda utilizar con precaucacion y evitar la
-divulgacion de datos sensibles), los datos mostrados son silados de una IE 
+Recursos adicionales: Toda información adicional se recomienda utilizar con precaución y evitar la divulgación de datos sensibles. Los datos mostrados son simulados de una institución educativa (IE).
 --
 Usuario: angel 
 Contraseña: 09182329
